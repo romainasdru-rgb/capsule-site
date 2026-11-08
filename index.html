@@ -33,6 +33,12 @@
             flex-shrink: 0;
         }
 
+        .header-left {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
         .site-title {
             text-align: center;
         }
@@ -54,13 +60,17 @@
 
         .header-right {
             display: flex;
+            align-items: center;
             justify-content: flex-end;
+            gap: 20px;
         }
 
-        .soundcloud-player {
-            width: 350px;
-            height: 75px;
+        /* Lecteur Spotify */
+        .spotify-player {
+            width: 320px;
+            height: 80px;
             border: none;
+            border-radius: 12px;
         }
 
         /* Triptyque ajusté */
@@ -105,14 +115,14 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-            transform: scale(0.84); /* Réduction de 16% de la taille des illustrations d'accueil */
+            transform: scale(0.84);
             filter: brightness(0.75) contrast(1.1);
             transition: filter 0.4s ease, transform 0.4s ease;
         }
 
         .triptych-card:hover .img-wrapper img {
             filter: brightness(0.95) contrast(1.15);
-            transform: scale(0.87); /* Conserve l'effet de zoom proportionnel au survol */
+            transform: scale(0.87);
         }
 
         .card-overlay {
@@ -262,7 +272,6 @@
             letter-spacing: 1px;
         }
 
-        /* Liste des Visuels & Gestion du ratio / orientation des photos */
         .visuals-list {
             display: flex;
             flex-direction: column;
@@ -309,7 +318,7 @@
         @media (max-width: 768px) {
             body { overflow-y: auto; height: auto; }
             header { display: flex; flex-direction: column; height: auto; gap: 15px; padding: 20px; text-align: center; }
-            .soundcloud-player { width: 100%; }
+            .spotify-player { width: 100%; }
             .triptych-container { flex-direction: column; height: auto; padding: 15px; }
             .triptych-card { height: 60vh; }
             .more-section { flex-direction: column; height: auto; gap: 10px; text-align: center; padding: 15px; }
@@ -325,7 +334,7 @@
             <p>[ CAPSULE SONORE & VISUELLE ]</p>
         </div>
         <div class="header-right">
-            <iframe class="soundcloud-player" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/longlivejulio/beamer-boy&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+            <iframe class="spotify-player" src="https://open.spotify.com/embed/track/3WIjb1OsvusdoXBJ5yPEui?utm_source=generator&theme=0" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         </div>
     </header>
 
